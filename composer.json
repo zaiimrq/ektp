@@ -1,0 +1,22 @@
+{
+    "name": "zmrq/ektp",
+    "description": "ektp generator",
+    "keywords": ["ektp"],
+    "type": "library",
+    "require": {
+        "php": "^8.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zmrq\\Ektp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zaiimrq",
+            "email": "zaiimrq@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
