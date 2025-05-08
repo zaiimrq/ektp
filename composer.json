@@ -1,6 +1,6 @@
 {
     "name": "zmrq/ektp",
-    "description": "PHP library to generate valid-format Indonesian eKTP/NIK numbers for testing and development purposes.",
+    "description": "PHP library to generate fake Indonesian eKTP/NIK numbers with valid format for testing and development purposes.",
     "keywords": [
         "ektp",
         "nik",
