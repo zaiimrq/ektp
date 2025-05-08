@@ -39,7 +39,7 @@ echo "Generated Province Code: " . $ktp->province->code;
 //Generate District
 
 echo "Generated District Code: " . $ktp->district->code;
-echo "Generated District Name: " . $ktp->distric->name;
+echo "Generated District Name: " . $ktp->district->name;
 ```
 
 ```php
