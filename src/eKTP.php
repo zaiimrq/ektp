@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Zmrq\Ektp;
 
-class eKTP {
-    
+use Zmrq\Ektp\Core\BaseKTP;
+class eKTP extends BaseKTP
+{
+
 }

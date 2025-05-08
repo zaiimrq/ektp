@@ -3,7 +3,6 @@
 namespace Zmrq\Ektp\Core\Generators;
 
 use Zmrq\Ektp\Core\ValueObjects\District;
-use Zmrq\Ektp\Core\ValueObjects\Province;
 use Zmrq\Ektp\Core\ValueObjects\User;
 
 final class NumberGenerator

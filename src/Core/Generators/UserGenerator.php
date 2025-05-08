@@ -3,12 +3,11 @@
 namespace Zmrq\Ektp\Core\Generators;
 
 use Zmrq\Ektp\Core\ValueObjects\User;
-use Zmrq\Ektp\Core\Generators\ProvinceGenerator;
 use Zmrq\Ektp\Core\ValueObjects\District;
 
 final class UserGenerator
 {
-    public static function make(string $name, District $district): User
+    public static function make(?string $name, District $district): User
     {
         $self = new static;
         return new User(
