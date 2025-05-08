@@ -6,6 +6,9 @@
     "require": {
         "php": "^8.2"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^12.1"
+    },
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -18,5 +21,8 @@
             "email": "zaiimrq@gmail.com"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "phpunit --testdox --colors=always"
+    }
 }
