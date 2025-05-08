@@ -1,66 +1,72 @@
-## Installation
+# eKTP Generator
 
-### Prerequisites
-- PHP 7.4 or higher
-- Composer (for composer installation)
+📄 **eKTP Generator** adalah library PHP untuk menghasilkan data identitas e-KTP Indonesia secara otomatis. Cocok untuk kebutuhan simulasi, testing, dan data dummy. Data yang dihasilkan mencakup NIK valid (16 digit), informasi wilayah (provinsi, kota/kabupaten, kecamatan), serta detail pengguna seperti tempat/tanggal lahir, agama, pekerjaan, status pernikahan, dan jenis kelamin.
 
-### Method 1: Install via Composer (Recommended)
+---
 
-```bash
-composer require yourname/ektp-generator
-```
+## 🛠️ Installation
 
-### Method 2: Manual Installation
+### ✅ Prerequisites
+- PHP 8.2 or higher
+- Composer
 
-1. Download the library files
-2. Include the autoloader in your project:
-
-```php
-require_once 'path/to/eKTP/src/autoload.php';
-```
-
-### Method 3: Using Git Clone
+### 📦 Method 1: Install via Composer (Recommended)
 
 ```bash
-git clone https://github.com/yourusername/ektp-generator.git
-cd ektp-generator
-composer install
+composer require zmrq/ektp
 ```
 
-### Verify Installation
 
-Create a test file to verify the installation:
+### 🚀 How To Use ?
 
 ```php
 <?php
 require 'vendor/autoload.php';
 
-use YourNamespace\eKTP;
+use Zmrq\Ektp\eKTP;
 
 $ktp = new eKTP();
-echo "Generated NIK: " . $ktp->nik;
 ```
 
-Run the test file:
-```bash
-php test.php
+```php
+// Generate Province
+
+echo "Generated Province Name: " . $ktp->province->name;
+echo "Generated Province Code: " . $ktp->province->code;
 ```
 
-### Troubleshooting
+```php
+//Generate District
 
-If you encounter any issues during installation:
+echo "Generated District Code: " . $ktp->district->code;
+echo "Generated District Name: " . $ktp->distric->name;
+```
 
-1. **Composer not found**:
-   ```bash
-   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-   php composer-setup.php
-   php -r "unlink('composer-setup.php');"
-   ```
+```php
+// Generate City
 
-2. **Autoloader issues**:
-   - Run `composer dump-autoload`
-   - Check your PHP version meets requirements
+echo "Generated City Code: " . $ktp->city->code;
+echo "Generated City Name: " . $ktp->city->name;
+```
 
-3. **Class not found**:
-   - Verify namespace usage matches your installation
-   - Check file permissions
+```php
+// User details
+echo "NIK: ". $ktp->nik
+echo "Born City: " . $ktp->user->bornCity;
+echo "Born Date: " . $ktp->user->bornDate;
+echo "Gender: " . $ktp->user->gender;
+echo "Religion: " . $ktp->user->religion;
+echo "Work: " . $ktp->user->work;
+echo "Married Status: " . $ktp->user->marriedStatus;
+```
+
+### 📌 Format NIK
+NIK disusun berdasarkan format standar nasional:
+```
+AA BB CC DD MM YY SSSS
+```
+- AA: Kode Provinsi
+- BB: Kode Kota/Kabupaten
+- CC: Kode Kecamatan
+- DDMMYY: Tanggal lahir (jika perempuan, DD ditambah 40)
+- SSSS: Nomor urut registrasi (acak)
