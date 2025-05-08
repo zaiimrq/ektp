@@ -2,12 +2,11 @@
 
 namespace Zmrq\Ektp\Core\ValueObjects;
 
-use Zmrq\Ektp\Core\ValueObjects\Province;
-
-final readonly class City
+final readonly class District
 {
     public function __construct(
         public readonly Province $province,
+        public readonly City $city,
         public readonly float $code,
         public readonly string $name
     ){}
