@@ -68,5 +68,5 @@ AA BB CC DD MM YY SSSS
 - AA: Kode Provinsi
 - BB: Kode Kota/Kabupaten
 - CC: Kode Kecamatan
-- DDMMYY: Tanggal lahir (jika perempuan, DD ditambah 40)
+- DDMMYY: Tanggal lahir
 - SSSS: Nomor urut registrasi (acak)
